@@ -23,3 +23,21 @@ export const selectedProductReducer = (state = {}, {type, payload}) => {
             return state
     }
 }
+
+export const setToken = (state = "", { type, payload }) => {
+    switch (type) {
+        case ActionTypes.SET_TOKEN:
+            return payload;
+        default:
+            return state;
+    }
+}
+
+export const setCategory = (state = [], { type, payload }) => {
+    switch (type) {
+        case ActionTypes.SET_CATEGORY:
+            return {...state, categories: payload};
+        default:
+            return state;
+    }
+}

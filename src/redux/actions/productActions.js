@@ -20,3 +20,18 @@ export const removeProducts = (products) => {
         payload: products
     };
 };
+
+export const setToken = (token) => {
+    return {
+        type: ActionTypes.SET_TOKEN,
+        payload: token
+    }
+}
+
+export const setCategory = (category) => {
+
+    return {
+        type: ActionTypes.SET_CATEGORY,
+        payload: category
+    }
+}

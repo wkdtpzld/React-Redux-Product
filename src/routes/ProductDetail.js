@@ -30,11 +30,11 @@ const ProductDetail = () => {
     }, [fetchProductDetail, id, dispatch]);
 
     return (
-        <div className="ui grid container">
+        <div className="">
             {Object.keys(product).length === 0 ? (
                 <div>...Loading</div>
             ) : (
-                <div className="ui placeholder segment">
+                <div className="">
                 <div className="">{product.description}</div>
                 </div>
             )}

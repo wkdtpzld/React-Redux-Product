@@ -1,0 +1,56 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding-block: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid;
+    box-shadow: 1px 1px 1px ;
+
+    .imgContainer {
+
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+
+        img {
+            width: 200px;
+            height: 230px;
+        }
+    }
+
+    .textContainer {
+        text-align: left;
+        margin-top: 20px;
+
+        .title {
+            font-size: 30px;
+            font-weight: 600;
+            
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        .price {
+            font-size: 15px;
+            font-weight: 1000;
+            color: rgb(126, 49, 49);
+        }
+
+        .category {
+            font-weight: 800;
+            color: gray;
+        }
+    }
+    
+}
