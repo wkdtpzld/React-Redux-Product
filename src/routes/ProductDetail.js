@@ -37,7 +37,7 @@ const ProductDetail = () => {
                 <div className="">
                 <div className="">{product.description}</div>
                 </div>
-            )}
+            )};
         </div>
     );
 }

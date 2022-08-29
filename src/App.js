@@ -6,6 +6,7 @@ import NotFound from './components/NotFound';
 import Home from './routes/Home';
 import "./App.scss"
 import Login from './routes/Login';
+import Details from './routes/Details';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Router>
           <Header />
         <Routes>
+          <Route path="/main/detail/:category" element={<Details />}></Route>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Home />} />
             <Route path="/main" element={<ProductListing />} />

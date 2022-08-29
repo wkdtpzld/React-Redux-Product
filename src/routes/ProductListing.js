@@ -27,23 +27,13 @@ const ProductListing = () => {
         dispatch(setCategory(categoryResponse.data));
     }, [dispatch]);
 
-    const onSubmit = (event) => {
-        event.preventDefault();
-    }
-
     useEffect(() => {
         fetchList();
     }, [fetchList]);
 
     return (
         <>
-            <form onSubmit={onSubmit}>
-            <select>
-                <ProductCGCompoent />
-            </select>
-            <input type="submit" value="검색" />
-        </form>
-        
+        <ProductCGCompoent />
         <div className={styles.container}>
             <ProductComponent />
         </div>
