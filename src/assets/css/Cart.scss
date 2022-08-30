@@ -1,0 +1,51 @@
+@mixin cartDefault {
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    z-index: 2;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cart {
+
+    .clickbar {
+        @include cartDefault;
+
+        .shoppingCart {
+            font-size: 5rem;
+        }
+    }
+
+    .clickbar2 {
+        @include cartDefault;
+
+        +.cartBox {
+            transform: translateX(500px);
+        }
+
+        .shoppingCart {
+            font-size: 5rem;
+        }
+    }
+    
+    .cartBox {
+        position: fixed;
+        height: 100%;
+        padding-left: 2rem;
+        width: 500px;
+        background-color: white;
+        right: 0%;
+        text-align: center;
+        transition: 0.9s ease;
+        border-left: 0.3ch solid;
+
+        .slide {
+            margin-top: 3rem;
+        }
+    }
+}
+
+
+

@@ -35,3 +35,10 @@ export const setCategory = (category) => {
         payload: category
     }
 }
+
+export const addCart = (cart) => {
+    return {
+        type: ActionTypes.ADD_CART,
+        payload: cart
+    }
+}

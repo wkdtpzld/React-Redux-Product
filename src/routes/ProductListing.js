@@ -37,6 +37,7 @@ const ProductListing = () => {
         <div className={styles.container}>
             <ProductComponent />
         </div>
+        
         </>
         
     )

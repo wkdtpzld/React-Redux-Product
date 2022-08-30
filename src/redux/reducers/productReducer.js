@@ -41,3 +41,12 @@ export const setCategory = (state = [], { type, payload }) => {
             return state;
     }
 }
+
+export const addCart = (state = [], { type, payload }) => {
+    switch (type) {
+        case ActionTypes.ADD_CART:
+            return { ...state, cart: payload };
+        default:
+            return state;
+    }
+}
