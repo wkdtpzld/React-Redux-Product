@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styles from "../assets/css/ProductCP.module.scss"
@@ -8,12 +8,11 @@ const ProductComponent = () => {
     
     const products = useSelector((state) => state.allProducts.products);
     const dispatch = useDispatch();
-    const [cart, setCart] = useState([]);
 
-    useEffect(() => {
-        dispatch(addCart(cart));
-    }, [cart, dispatch]);
-
+    const addCartFetch = (cart, products) => {
+        dispatch(addCart(cart, products));
+    };
+    
     const renderList = products.map((product) => {
         return (
             <div className={ styles.cart } key={product.id}>
@@ -30,7 +29,7 @@ const ProductComponent = () => {
                         <div className={styles.price}>$ {product.price}</div>
                         <div className={styles.category}>category : {product.category}</div>
                         <div onClick={() => {
-                            setCart([...cart, product]);
+                            addCartFetch(product, products);
                         }} >Add Cart</div>
                     </div>
                 </div>

@@ -36,9 +36,12 @@ export const setCategory = (category) => {
     }
 }
 
-export const addCart = (cart) => {
+export const addCart = (cart, products) => {
     return {
         type: ActionTypes.ADD_CART,
-        payload: cart
+        payload: {
+            cart,
+            products
+        }
     }
 }
