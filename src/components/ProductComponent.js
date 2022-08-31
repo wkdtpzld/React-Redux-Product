@@ -28,7 +28,7 @@ const ProductComponent = () => {
                         </Link></div>
                         <div className={styles.price}>$ {product.price}</div>
                         <div className={styles.category}>category : {product.category}</div>
-                        <div onClick={() => {
+                        <div className={styles.addCart} onClick={() => {
                             addCartFetch(product, products);
                         }} >Add Cart</div>
                     </div>

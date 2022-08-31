@@ -9,6 +9,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
     <Cart />
-    <App />
+    <App className="App"/>
   </Provider>
 );

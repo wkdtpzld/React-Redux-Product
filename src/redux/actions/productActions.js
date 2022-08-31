@@ -45,3 +45,22 @@ export const addCart = (cart, products) => {
         }
     }
 }
+
+export const adjustQty = (itemID, value) => {
+    return {
+        type: ActionTypes.ADJUST_QTY,
+        payload: {
+            id: itemID,
+            qty: value
+        }
+    }
+}
+
+export const removeCart = (itemID) => {
+    return {
+        type: ActionTypes.REMOVE_CART,
+        payload: {
+            id: itemID
+        }
+    }
+}

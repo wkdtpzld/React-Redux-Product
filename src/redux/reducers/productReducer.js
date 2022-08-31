@@ -55,11 +55,21 @@ export const addCart = (state = initialState , { type, payload }) => {
                 cart: inCart
                     ? state.cart.map((item) =>
                         item.id === payload.cart.id
-                        ? { ...item, qty: item.qty + 1 }
+                        ? { ...item, qty: parseInt(item.qty + 1) }
                         : item
                     )
                     : [...state.cart, { ...item, qty: 1 }],
             };
+        case ActionTypes.ADJUST_QTY:
+            return {
+                ...state,
+                cart: state.cart.map((item) => item.id === payload.id ? {...item, qty: parseInt(payload.qty)} : item)
+            }
+        case ActionTypes.REMOVE_CART:
+            return {
+                ...state,
+                cart: state.cart.filter(item => item.id !== payload.id)
+            }
         default:
             return state;
     }
