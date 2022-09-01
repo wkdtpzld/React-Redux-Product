@@ -37,14 +37,14 @@ const ProductDetail = () => {
                 <div>...Loading</div>
             ) : (
                 <div className={styles.gridBox}>
+                    <div className={styles.imgBox}>
+                        <img src={product.image} alt={product.title} />
+                    </div>
                     <div className={styles.textBox}>
                         <h1>{product.title}</h1>
                         <h3>{product.description}</h3>
                         <div className={styles.price}>$ {product.price}</div>
                         <AddCart product={product} className={styles.addCart}/>
-                    </div>
-                    <div className={styles.imgBox}>
-                        <img src={product.image} alt={product.title} />
                     </div>
                 </div>
             )};

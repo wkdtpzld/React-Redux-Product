@@ -9,7 +9,7 @@ const Header = () => {
                 <h2>FakeShop</h2>
                 <div className={ styles.uiContainer }>
                     <ul>
-                        <li><Link to="/main" >Home </Link></li>
+                        <li><Link to="/" >Home </Link></li>
                         <li><Link to="#" >Profile </Link></li>
                     </ul>
                     <div className={styles.btn}>

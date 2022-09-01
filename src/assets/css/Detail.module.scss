@@ -16,7 +16,7 @@
 
         h3 {
             line-height: 2rem;
-            width: 50%;
+            width: 100%;
         }
 
         .price {
@@ -54,10 +54,14 @@
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1200px){
     .gridBox{
 
-        padding: 2rem;
+        grid-template-columns: none;
+        grid-template-rows: repeat(2, 1fr);
+        padding-top: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
 
         .imgBox{
             img {
