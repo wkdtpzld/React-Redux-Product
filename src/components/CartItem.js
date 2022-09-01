@@ -12,14 +12,18 @@ const CartItem = ({ cart }) => {
 
     const [cnt, setCnt] = useState(cartQ.qty);
 
-    const onChange = () => {
-        dispatch(adjustQty(cart.id, cartQ.qty));
-        setCnt(cartQ.qty);
+    const onChange = (event) => {
+        const {
+            target: {value}
+        } = event
+
+        dispatch(adjustQty(cart.id, value));
+        setCnt(value);
     };
 
     useEffect(() => {
-        setCnt(cartQ.qty);
-    }, [cartQ]);
+        setCnt(cartQ.qty)
+    }, [cartQty, cartQ.qty]);
 
     const removeCartfetch = (itemID) => dispatch(removeCart(itemID));
 

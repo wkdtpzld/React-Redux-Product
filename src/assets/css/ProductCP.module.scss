@@ -1,3 +1,18 @@
+@mixin addCart($pd: 10px) {
+    .addCart {
+        cursor: pointer;
+        margin-top: 10px;
+        padding: $pd 15px;
+        border-radius: 20px;
+        background-color: tomato;
+        display: block;
+        width: 30%;
+        font-weight: 500;
+        box-shadow: 0 2px 8px rgba(0,0,0, 0.2);
+        
+    }
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -52,21 +67,12 @@
             color: gray;
         }
         
-        .addCart {
-            cursor: pointer;
-            margin-top: 10px;
-            padding: 10px 15px;
-            border-radius: 20px;
-            background-color: tomato;
-            display: block;
-            width: 30%;
-            font-weight: 500;
-            box-shadow: 0 2px 8px rgba(0,0,0, 0.2);
-            
-        }
+        @include addCart();
     }
     
 }
+
+@include addCart(20px);
 
 .selectBox {
     display: flex;
